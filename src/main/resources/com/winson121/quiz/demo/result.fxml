@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.winson121.quiz.demo.ResultController">
+   <children>
+      <Label layoutX="237.0" layoutY="52.0" text="Result">
+         <font>
+            <Font name="System Bold" size="31.0" />
+         </font></Label>
+      <Label fx:id="remark" layoutX="44.0" layoutY="134.0" maxHeight="-Infinity" maxWidth="-Infinity" text="This is your hard work results. Good job so far, I wished you lots of success for all your dedication" wrapText="true" />
+      <Label fx:id="marks" alignment="CENTER" contentDisplay="CENTER" layoutX="125.0" layoutY="190.0" prefHeight="120.0" prefWidth="120.0" style="-fx-background-color: #cce6ff; -fx-background-radius: 16; -fx-border-radius: 16;" text="4/5" textAlignment="CENTER" textFill="#0dc60d" wrapText="true">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </Label>
+      <Label fx:id="markstext" layoutX="312.0" layoutY="319.0" text="80% Scored" textFill="#3ea33e">
+         <font>
+            <Font name="Britannic Bold" size="18.0" />
+         </font></Label>
+      <ProgressIndicator fx:id="correctchart" layoutX="300.0" layoutY="190.0" minHeight="120.0" minWidth="120.0" progress="0.8" style="-fx-background-color: #80ff80; -fx-backgorund-radius: 20px; -fx-border-radius: 20px;">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding></ProgressIndicator>
+      <Label fx:id="correcttext" layoutX="119.0" layoutY="319.0" text="Correct Answers: 4" textFill="#60d7f2">
+         <font>
+            <Font name="Britannic Bold" size="17.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
