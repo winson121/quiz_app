@@ -8,6 +8,7 @@ import java.awt.Desktop;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import javafx.fxml.FXML;
@@ -54,6 +55,9 @@ public class HelloController {
             welcomeText.setText("No file uploaded!");
             throw new IllegalArgumentException(e);
         }
+
+        // shuffle the questions
+        Collections.shuffle(questions);
 
         // close the hello stage
         Stage thisStage = (Stage) ((Button)actionEvent.getSource()).getScene().getWindow();

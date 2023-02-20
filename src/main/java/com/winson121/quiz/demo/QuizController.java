@@ -105,7 +105,6 @@ public class QuizController {
 
             }
 
-            System.out.println(answerFields.get(0).getText());
             for (int i=0; i < answerFields.size(); i++) {
                 String strippedLowercaseAns = answerFields.get(i).getText().strip().toLowerCase();
                 String strippedLowercaseCorrectAns = q.getAnswers().get(i).strip().toLowerCase();
@@ -128,15 +127,15 @@ public class QuizController {
         flowpane1.setLayoutX(43.0);
         flowpane1.setLayoutY(14.0);
         flowpane1.prefHeight(142.0);
-        flowpane1.prefWidth(494.0);
-        flowpane1.setMaxWidth(600.0);
+        flowpane1.prefWidth(1000.0);
+        flowpane1.setMaxWidth(1000.0);
+        flowpane1.setPrefWrapLength(1000.0);
         flowpane1.setOrientation(Orientation.HORIZONTAL);
-//        flowpane1.setTileAlignment(Pos.TOP_LEFT);
+
         flowpane1.setVgap(3);
         flowpane1.setHgap(1);
         flowpane1.getStyleClass().add("flowpane1");
 
-//        question.setText(counter+1 + ". " + q.getQuestion());
         processFillinQuestion(q, flowpane1);
 
         anchorpane.getChildren().add(flowpane1);
@@ -144,8 +143,6 @@ public class QuizController {
         next.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-//                checkFillinAnswer(tilepane1, savedAnswer);
-//                savedAnswer.put(counter, answerList);
                 if (checkAnswerV2(flowpane1)) {
                     correct++;
                 } else {
@@ -211,13 +208,14 @@ public class QuizController {
     private void addMCQ(Question q) {
         anchorpane.getChildren().remove(anchorpane.lookup(".tilepane1"));
         anchorpane.getChildren().remove(anchorpane.lookup(".tilepane2"));
+        anchorpane.getChildren().remove(anchorpane.lookup((".flowpane1")));
         TilePane tilepane1 = new TilePane();
 
         tilepane1.setLayoutX(43.0);
         tilepane1.setLayoutY(14.0);
         tilepane1.prefHeight(142.0);
         tilepane1.prefWidth(494.0);
-        tilepane1.setMaxWidth(494.0);
+        tilepane1.setMaxWidth(1000.0);
         tilepane1.setOrientation(Orientation.HORIZONTAL);
         tilepane1.setTileAlignment(Pos.TOP_LEFT);
         tilepane1.getStyleClass().add("tilepane1");
@@ -237,7 +235,7 @@ public class QuizController {
         tilepane2.setLayoutY(213.0);
         tilepane2.setOrientation(Orientation.VERTICAL);
         tilepane2.setPrefHeight(165.0);
-        tilepane2.setPrefWidth(561.0);
+        tilepane2.setPrefWidth(750.0);
         tilepane2.setTileAlignment(Pos.TOP_LEFT);
         tilepane2.setVgap(5.0);
 
