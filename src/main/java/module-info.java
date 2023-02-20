@@ -2,9 +2,11 @@ module com.winson121.quiz.demo {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.web;
+    requires javafx.base;
+    requires javafx.graphics;
+    requires javafx.media;
 
     requires java.desktop;
-
 
     requires com.fasterxml.jackson.core;
     requires com.fasterxml.jackson.annotation;
@@ -20,4 +22,5 @@ module com.winson121.quiz.demo {
     opens com.winson121.quiz.demo to javafx.fxml;
     exports com.winson121.quiz.demo;
     exports com.winson121.quiz.demo.entity to com.fasterxml.jackson.databind;
+
 }

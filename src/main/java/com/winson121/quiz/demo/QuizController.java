@@ -1,7 +1,6 @@
 package com.winson121.quiz.demo;
 
 import com.winson121.quiz.demo.entity.Question;
-import javafx.collections.ObservableMap;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
