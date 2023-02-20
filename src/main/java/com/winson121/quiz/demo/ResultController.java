@@ -1,8 +1,21 @@
 package com.winson121.quiz.demo;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressIndicator;
+import javafx.scene.paint.Color;
+import javafx.stage.FileChooser;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+
+import java.io.File;
+import java.io.IOException;
 
 public class ResultController {
 
@@ -22,5 +35,27 @@ public class ResultController {
         correctchart.setProgress(correctf);
 
         markstext.setText(String.valueOf(correctf * 100) + "% Scored");
+    }
+
+    @FXML
+    protected void onRestartButtonClick(ActionEvent actionEvent) {
+        Stage stage = (Stage) ((Button)actionEvent.getSource()).getScene().getWindow();
+
+        // close the result stage
+        Stage thisStage = (Stage) ((Button)actionEvent.getSource()).getScene().getWindow();
+        thisStage.close();
+
+        // load the start stage
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("hello-view.fxml"));
+        try {
+            Scene scene = new Scene(fxmlLoader.load());
+            stage = new Stage();
+            stage.setScene(scene);
+            stage.initStyle(StageStyle.TRANSPARENT);
+            scene.setFill(Color.TRANSPARENT);
+            stage.show();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

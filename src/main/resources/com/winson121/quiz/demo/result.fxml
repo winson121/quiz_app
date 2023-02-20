@@ -33,5 +33,6 @@
             <Font name="Britannic Bold" size="17.0" />
          </font>
       </Label>
+      <Button onAction="#onRestartButtonClick" layoutX="519.0" layoutY="348.0" mnemonicParsing="false" text="Restart" />
    </children>
 </AnchorPane>
