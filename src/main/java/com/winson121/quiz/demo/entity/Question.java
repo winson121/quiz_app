@@ -6,16 +6,18 @@ import java.util.List;
 
 
 public class Question {
+
+    @JsonProperty("question")
     private String question;
 
-    @JsonProperty("essay_answer")
-    private List<String> essayAnswer;
-
-    @JsonProperty("mcq_choices")
-    private List<String> mcqChoices;
+    @JsonProperty("answers")
+    private List<String> answers;
 
     @JsonProperty("mcq_answer")
-    private int mcqAnswer;
+    private String mcqAnswer;
+
+    @JsonProperty("question_type")
+    private String type;
 
     public Question() {}
 
@@ -23,52 +25,52 @@ public class Question {
         this.question = question;
     }
 
-    public Question(String question, List<String> essayAnswer, List<String> mcqChoices, int mcqAnswer) {
+    public Question(String question, List<String> answers, String mcqAnswer, String type) {
         this.question = question;
-        this.essayAnswer = essayAnswer;
-        this.mcqChoices = mcqChoices;
+        this.answers = answers;
         this.mcqAnswer = mcqAnswer;
+        this.type = type;
     }
 
     public String getQuestion() {
         return question;
     }
 
-    public List<String> getEssayAnswer() {
-        return essayAnswer;
-    }
-
-    public List<String> getMcqChoices() {
-        return mcqChoices;
-    }
-
-    public int getMcqAnswer() {
-        return mcqAnswer;
-    }
-
     public void setQuestion(String question) {
         this.question = question;
     }
 
-    public void setEssayAnswer(List<String> essayAnswer) {
-        this.essayAnswer = essayAnswer;
+    public List<String> getAnswers() {
+        return answers;
     }
 
-    public void setMcqChoices(List<String> mcqChoices) {
-        this.mcqChoices = mcqChoices;
+    public void setAnswers(List<String> answers) {
+        this.answers = answers;
     }
 
-    public void setMcqAnswer(int mcqAnswer) {
+    public String getMcqAnswer() {
+        return mcqAnswer;
+    }
+
+    public void setMcqAnswer(String mcqAnswer) {
         this.mcqAnswer = mcqAnswer;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
     @Override
     public String toString() {
         return "Question{" +
                 "question='" + question + '\'' +
-                ", essayAnswer=" + essayAnswer +
-                ", mcqChoices=" + mcqChoices +
+                ", answers=" + answers +
                 ", mcqAnswer=" + mcqAnswer +
+                ", type='" + type + '\'' +
                 '}';
     }
 }

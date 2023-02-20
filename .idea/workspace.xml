@@ -4,29 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0457b0c-8e7b-44a2-8aeb-21cfaef29a61" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/HelloController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/HomeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/QuizApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/QuizController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/ResultController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/entity/Question.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/winson121/quiz/demo/hello-view.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/winson121/quiz/demo/home.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/winson121/quiz/demo/quiz.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/winson121/quiz/demo/result.fxml" afterDir="false" />
+    <list default="true" id="f0457b0c-8e7b-44a2-8aeb-21cfaef29a61" name="Changes" comment="&quot;added multiple choice question and upload json file function&quot;">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/QuizController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/QuizController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/entity/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/entity/Question.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/winson121/quiz/demo/quiz.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/winson121/quiz/demo/quiz.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +88,19 @@
       <option name="presentableId" value="Default" />
       <updated>1676393132524</updated>
     </task>
+    <task id="LOCAL-00001" summary="&quot;added multiple choice question and upload json file function&quot;">
+      <created>1676734719356</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1676734719356</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="&quot;added multiple choice question and upload json file function&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;added multiple choice question and upload json file function&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -373,6 +368,231 @@
           <line>171</line>
           <option name="timeStamp" value="159" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/HelloController.java</url>
+          <line>71</line>
+          <option name="timeStamp" value="210" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/HelloController.java</url>
+          <line>70</line>
+          <option name="timeStamp" value="211" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/QuizController.java</url>
+          <line>67</line>
+          <option name="timeStamp" value="261" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/QuizController.java</url>
+          <line>69</line>
+          <option name="timeStamp" value="262" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/QuizController.java</url>
+          <line>68</line>
+          <option name="timeStamp" value="263" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/QuizController.java</url>
+          <line>71</line>
+          <option name="timeStamp" value="264" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/QuizController.java</url>
+          <line>70</line>
+          <option name="timeStamp" value="265" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/QuizController.java</url>
+          <line>73</line>
+          <option name="timeStamp" value="266" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/QuizController.java</url>
+          <line>72</line>
+          <option name="timeStamp" value="267" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/QuizController.java</url>
+          <line>100</line>
+          <option name="timeStamp" value="301" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/QuizController.java</url>
+          <line>119</line>
+          <option name="timeStamp" value="303" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/QuizController.java</url>
+          <line>181</line>
+          <option name="timeStamp" value="306" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/QuizController.java</url>
+          <line>182</line>
+          <option name="timeStamp" value="307" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/QuizController.java</url>
+          <line>184</line>
+          <option name="timeStamp" value="308" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/QuizController.java</url>
+          <line>183</line>
+          <option name="timeStamp" value="309" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/QuizController.java</url>
+          <line>186</line>
+          <option name="timeStamp" value="310" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/QuizController.java</url>
+          <line>185</line>
+          <option name="timeStamp" value="311" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/QuizController.java</url>
+          <line>188</line>
+          <option name="timeStamp" value="312" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/QuizController.java</url>
+          <line>189</line>
+          <option name="timeStamp" value="314" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/QuizController.java</url>
+          <line>193</line>
+          <option name="timeStamp" value="316" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/QuizController.java</url>
+          <line>192</line>
+          <option name="timeStamp" value="317" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/QuizController.java</url>
+          <line>197</line>
+          <option name="timeStamp" value="318" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/QuizController.java</url>
+          <line>196</line>
+          <option name="timeStamp" value="319" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/QuizController.java</url>
+          <line>198</line>
+          <option name="timeStamp" value="320" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/QuizController.java</url>
+          <line>199</line>
+          <option name="timeStamp" value="321" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/QuizController.java</url>
+          <line>201</line>
+          <option name="timeStamp" value="322" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/QuizController.java</url>
+          <line>200</line>
+          <option name="timeStamp" value="323" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/QuizController.java</url>
+          <line>203</line>
+          <option name="timeStamp" value="324" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/QuizController.java</url>
+          <line>202</line>
+          <option name="timeStamp" value="325" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/QuizController.java</url>
+          <line>204</line>
+          <option name="timeStamp" value="326" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/QuizController.java</url>
+          <line>205</line>
+          <option name="timeStamp" value="327" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/QuizController.java</url>
+          <line>207</line>
+          <option name="timeStamp" value="328" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/QuizController.java</url>
+          <line>206</line>
+          <option name="timeStamp" value="329" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/QuizController.java</url>
+          <line>208</line>
+          <option name="timeStamp" value="330" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/QuizController.java</url>
+          <line>102</line>
+          <option name="timeStamp" value="331" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/QuizController.java</url>
+          <line>103</line>
+          <option name="timeStamp" value="332" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/QuizController.java</url>
+          <line>99</line>
+          <option name="timeStamp" value="333" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/QuizController.java</url>
+          <line>117</line>
+          <option name="timeStamp" value="334" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/QuizController.java</url>
+          <line>108</line>
+          <option name="timeStamp" value="335" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/QuizController.java</url>
+          <line>110</line>
+          <option name="timeStamp" value="336" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/QuizController.java</url>
+          <line>109</line>
+          <option name="timeStamp" value="337" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/QuizController.java</url>
+          <line>111</line>
+          <option name="timeStamp" value="338" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/QuizController.java</url>
+          <line>112</line>
+          <option name="timeStamp" value="339" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/QuizController.java</url>
+          <line>114</line>
+          <option name="timeStamp" value="340" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/QuizController.java</url>
+          <line>113</line>
+          <option name="timeStamp" value="341" />
+        </line-breakpoint>
         <line-breakpoint type="java-method">
           <url>jar://$USER_HOME$/.jdks/temurin-11.0.18/lib/src.zip!/java.base/java/util/Map.java</url>
           <line>242</line>
@@ -381,6 +601,15 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="152" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/QuizController.java</url>
+          <line>66</line>
+          <properties class="com.winson121.quiz.demo.QuizController" method="checkAnswer">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="260" />
         </line-breakpoint>
         <breakpoint type="java-exception">
           <properties class="java.lang.IllegalStateException" package="java.lang" />
@@ -395,8 +624,19 @@
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="javafx.scene.control.ToggleGroup" memberName="selectedToggle" />
+        <PinnedItemInfo parentTag="javafx.scene.layout.TilePane" memberName="childSet" />
         <PinnedItemInfo parentTag="javafx.scene.control.ToggleGroup" memberName="toggles" />
       </pinned-members>
     </pin-to-top-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="((HashSet)((AnchorPane)((QuizController)this).anchorpane).childSet).toArray()[1]" custom="java.util.HashSet,com.winson121.quiz.demo.QuizController,javafx.scene.layout.AnchorPane" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/demo$QuizApplication.ic" NAME="QuizApplication Coverage Results" MODIFIED="1676813680160" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.winson121.quiz.demo.*</FILTER>
+    </SUITE>
   </component>
 </project>

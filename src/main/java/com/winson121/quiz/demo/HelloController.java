@@ -49,6 +49,7 @@ public class HelloController {
             questions = objectMapper.readValue(file, new TypeReference<>() {});
         } catch (IOException e) {
             welcomeText.setText("The questions format is incorrect!");
+            throw new RuntimeException(e);
         } catch (IllegalArgumentException e) {
             welcomeText.setText("No file uploaded!");
             throw new IllegalArgumentException(e);
