@@ -239,7 +239,9 @@ public class QuizController {
         tilepane2.setTileAlignment(Pos.TOP_LEFT);
         tilepane2.setVgap(5.0);
 
-        // remove toggles from previous questions
+        // shuffle the multiple choices
+        Collections.shuffle(q.getAnswers());
+
         for (String s: q.getAnswers()) {
             RadioButton rad = new RadioButton(s);
             tilepane2.getChildren().add(rad);

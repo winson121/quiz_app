@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0457b0c-8e7b-44a2-8aeb-21cfaef29a61" name="Changes" comment="&quot;add maven setting to create quizapp.jar file&quot;">
+    <list default="true" id="f0457b0c-8e7b-44a2-8aeb-21cfaef29a61" name="Changes" comment="&quot;add add randomize quiz and resize question window&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/HelloController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/QuizController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/QuizController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -151,7 +149,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676912253438</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="&quot;add add randomize quiz and resize question window&quot;">
+      <created>1676916099113</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1676916099113</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -160,7 +165,8 @@
     <MESSAGE value="&quot;add the restart quiz button&quot;" />
     <MESSAGE value="&quot;add jar packaging setting in pom.xml&quot;" />
     <MESSAGE value="&quot;add maven setting to create quizapp.jar file&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;add maven setting to create quizapp.jar file&quot;" />
+    <MESSAGE value="&quot;add add randomize quiz and resize question window&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;add add randomize quiz and resize question window&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
