@@ -36,9 +36,9 @@ public class QuizController {
 //    @FXML
 //    public TilePane tilepane;
 
-    int counter = 0;
-    static int correct = 0;
-    static int wrong = 0;
+    int counter;
+    static int correct;
+    static int wrong;
 
     private Map<Integer, List<String>> savedAnswer;
 
@@ -47,6 +47,9 @@ public class QuizController {
     private List<Integer> answers = new ArrayList<>();
     @FXML
     private void initialize () {
+        counter = 0;
+        wrong = 0;
+        correct = 0;
         savedAnswer = new HashMap<>();
         loadQuestions();
     }

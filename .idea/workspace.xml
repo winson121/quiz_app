@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0457b0c-8e7b-44a2-8aeb-21cfaef29a61" name="Changes" comment="&quot;add add randomize quiz and resize question window&quot;">
+    <list default="true" id="f0457b0c-8e7b-44a2-8aeb-21cfaef29a61" name="Changes" comment="&quot;add add randomize mcq choices&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/QuizController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/QuizController.java" afterDir="false" />
     </list>
@@ -156,7 +156,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676916099113</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="&quot;add add randomize mcq choices&quot;">
+      <created>1676917445243</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1676917445243</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -166,36 +173,12 @@
     <MESSAGE value="&quot;add jar packaging setting in pom.xml&quot;" />
     <MESSAGE value="&quot;add maven setting to create quizapp.jar file&quot;" />
     <MESSAGE value="&quot;add add randomize quiz and resize question window&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;add add randomize quiz and resize question window&quot;" />
+    <MESSAGE value="&quot;add add randomize mcq choices&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;add add randomize mcq choices&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/ResultController.java</url>
-          <line>29</line>
-          <option name="timeStamp" value="85" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/ResultController.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="86" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/ResultController.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="87" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/ResultController.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="88" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/ResultController.java</url>
-          <line>25</line>
-          <option name="timeStamp" value="89" />
-        </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>jar://$USER_HOME$/.jdks/temurin-11.0.18/lib/src.zip!/java.base/java/lang/ClassLoader.java</url>
           <line>1392</line>
@@ -443,6 +426,36 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/HelloController.java</url>
           <line>74</line>
           <option name="timeStamp" value="211" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/ResultController.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="215" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/ResultController.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="216" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/ResultController.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="220" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/ResultController.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="221" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/ResultController.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="222" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/winson121/quiz/demo/ResultController.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="223" />
         </line-breakpoint>
         <line-breakpoint type="java-method">
           <url>jar://$USER_HOME$/.jdks/temurin-11.0.18/lib/src.zip!/java.base/java/util/Map.java</url>
