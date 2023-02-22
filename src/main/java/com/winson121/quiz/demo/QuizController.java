@@ -5,6 +5,7 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Insets;
 import javafx.geometry.Orientation;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
@@ -15,6 +16,9 @@ import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.TilePane;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.text.Text;
+import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -122,31 +126,31 @@ public class QuizController {
     }
 
     private void addFillin(Question q) {
-        anchorpane.getChildren().remove(anchorpane.lookup(".flowpane1"));
+        anchorpane.getChildren().remove(anchorpane.lookup(".textflow1"));
         anchorpane.getChildren().remove(anchorpane.lookup(".tilepane1"));
         anchorpane.getChildren().remove(anchorpane.lookup(".tilepane2"));
-        FlowPane flowpane1 = new FlowPane();
+        TextFlow textflow = new TextFlow();
 
-        flowpane1.setLayoutX(43.0);
-        flowpane1.setLayoutY(14.0);
-        flowpane1.prefHeight(142.0);
-        flowpane1.prefWidth(1000.0);
-        flowpane1.setMaxWidth(1000.0);
-        flowpane1.setPrefWrapLength(1000.0);
-        flowpane1.setOrientation(Orientation.HORIZONTAL);
+        textflow.setLayoutX(43.0);
+        textflow.setLayoutY(14.0);
+        textflow.prefHeight(142.0);
+        textflow.prefWidth(1000.0);
+        textflow.setMaxWidth(1000.0);
+//        textflow.setPrefWrapLength(1000.0);
+//        textflow.setOrientation(Orientation.HORIZONTAL);
 
-        flowpane1.setVgap(3);
-        flowpane1.setHgap(1);
-        flowpane1.getStyleClass().add("flowpane1");
+//        textflow.setVgap(3);
+//        textflow.setHgap(1);
+        textflow.getStyleClass().add("textflow1");
 
-        processFillinQuestion(q, flowpane1);
+        processFillinQuestion(q, textflow);
 
-        anchorpane.getChildren().add(flowpane1);
+        anchorpane.getChildren().add(textflow);
 
         next.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                if (checkAnswerV2(flowpane1)) {
+                if (checkAnswerV2(textflow)) {
                     correct++;
                 } else {
                     wrong++;
@@ -177,7 +181,7 @@ public class QuizController {
         });
     }
 
-    private void processFillinQuestion(Question q, FlowPane fp) {
+    private void processFillinQuestion(Question q, TextFlow tf) {
         String qStr = q.getQuestion().strip();
         String[] qStrs = qStr.split("___", 0);
         int numBlanks = 0;
@@ -193,16 +197,18 @@ public class QuizController {
             return;
         }
 
-        Label questionNum = new Label();
+        Text questionNum = new Text();
         questionNum.setText(counter+1 + ". ");
-        fp.getChildren().add(questionNum);
+        tf.getChildren().add(questionNum);
         for (String s: qStrs) {
-            Label partQuestion = new Label();
+            Text partQuestion = new Text();
             partQuestion.setText(s);
-            partQuestion.setWrapText(true);
-            fp.getChildren().add(partQuestion);
+//            partQuestion.setWrapText(true);
+            tf.getChildren().add(partQuestion);
             if (numBlanks > 0) {
-                fp.getChildren().add(new TextField());
+                TextField answerField = new TextField();
+                answerField.setPadding(new Insets(1,1,1,1));
+                tf.getChildren().add(answerField);
                 numBlanks--;
             }
         }
@@ -211,7 +217,7 @@ public class QuizController {
     private void addMCQ(Question q) {
         anchorpane.getChildren().remove(anchorpane.lookup(".tilepane1"));
         anchorpane.getChildren().remove(anchorpane.lookup(".tilepane2"));
-        anchorpane.getChildren().remove(anchorpane.lookup((".flowpane1")));
+        anchorpane.getChildren().remove(anchorpane.lookup((".textflow1")));
         TilePane tilepane1 = new TilePane();
 
         tilepane1.setLayoutX(43.0);
