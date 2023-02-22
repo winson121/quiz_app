@@ -44,7 +44,9 @@ public class QuizController {
     static int correct;
     static int wrong;
 
-    private Map<Integer, List<String>> savedAnswer;
+    private Stack<String> nodeClassStacks;
+
+    static Map<Integer, List<String>> savedAnswer;
 
     private List<Question> questions = HelloController.questions;
 
@@ -55,6 +57,7 @@ public class QuizController {
         wrong = 0;
         correct = 0;
         savedAnswer = new HashMap<>();
+        nodeClassStacks = new Stack<>();
         loadQuestions();
     }
 
@@ -113,22 +116,26 @@ public class QuizController {
             }
 
             for (int i=0; i < answerFields.size(); i++) {
+                answerList.add(answerFields.get(i).getText().strip());
                 String strippedLowercaseAns = answerFields.get(i).getText().strip().toLowerCase();
                 String strippedLowercaseCorrectAns = q.getAnswers().get(i).strip().toLowerCase();
                 if (!strippedLowercaseAns.equals(strippedLowercaseCorrectAns)) {
                     isTrue = false;
-                    break;
                 }
             }
+            savedAnswer.put(counter, answerList);
         }
 
         return isTrue;
     }
 
     private void addFillin(Question q) {
-        anchorpane.getChildren().remove(anchorpane.lookup(".textflow1"));
-        anchorpane.getChildren().remove(anchorpane.lookup(".tilepane1"));
-        anchorpane.getChildren().remove(anchorpane.lookup(".tilepane2"));
+        while (!nodeClassStacks.isEmpty()) {
+            anchorpane.getChildren().remove(anchorpane.lookup("."+nodeClassStacks.pop()));
+        }
+//        anchorpane.getChildren().remove(anchorpane.lookup(".textflow1"));
+//        anchorpane.getChildren().remove(anchorpane.lookup(".tilepane1"));
+//        anchorpane.getChildren().remove(anchorpane.lookup(".tilepane2"));
         TextFlow textflow = new TextFlow();
 
         textflow.setLayoutX(43.0);
@@ -141,11 +148,13 @@ public class QuizController {
 
 //        textflow.setVgap(3);
 //        textflow.setHgap(1);
-        textflow.getStyleClass().add("textflow1");
+        String textflowStyleClass = "textflow1";
+        textflow.getStyleClass().add(textflowStyleClass);
 
         processFillinQuestion(q, textflow);
 
         anchorpane.getChildren().add(textflow);
+        nodeClassStacks.push(textflowStyleClass);
 
         next.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -215,10 +224,15 @@ public class QuizController {
 
     }
     private void addMCQ(Question q) {
-        anchorpane.getChildren().remove(anchorpane.lookup(".tilepane1"));
-        anchorpane.getChildren().remove(anchorpane.lookup(".tilepane2"));
-        anchorpane.getChildren().remove(anchorpane.lookup((".textflow1")));
+        while (!nodeClassStacks.isEmpty()) {
+            anchorpane.getChildren().remove(anchorpane.lookup("."+nodeClassStacks.pop()));
+        }
+//        anchorpane.getChildren().remove(anchorpane.lookup(".tilepane1"));
+//        anchorpane.getChildren().remove(anchorpane.lookup(".tilepane2"));
+//        anchorpane.getChildren().remove(anchorpane.lookup((".textflow1")));
         TilePane tilepane1 = new TilePane();
+
+        String tilepaneStyleClass = "tilepane1";
 
         tilepane1.setLayoutX(43.0);
         tilepane1.setLayoutY(14.0);
@@ -227,7 +241,7 @@ public class QuizController {
         tilepane1.setMaxWidth(1000.0);
         tilepane1.setOrientation(Orientation.HORIZONTAL);
         tilepane1.setTileAlignment(Pos.TOP_LEFT);
-        tilepane1.getStyleClass().add("tilepane1");
+        tilepane1.getStyleClass().add(tilepaneStyleClass);
         Label question = new Label();
         question.setWrapText(true);
         question.setText(counter+1 + ". " + q.getQuestion());
@@ -235,11 +249,14 @@ public class QuizController {
         tilepane1.getChildren().add(question);
 
         anchorpane.getChildren().add(tilepane1);
+        nodeClassStacks.push(tilepaneStyleClass);
 
         ToggleGroup toggleGroup = new ToggleGroup();
 
+        tilepaneStyleClass = "tilepane2";
+
         TilePane tilepane2 = new TilePane();
-        tilepane2.getStyleClass().add("tilepane2");
+        tilepane2.getStyleClass().add(tilepaneStyleClass);
         tilepane2.setLayoutX(43.0);
         tilepane2.setLayoutY(213.0);
         tilepane2.setOrientation(Orientation.VERTICAL);
@@ -260,6 +277,7 @@ public class QuizController {
 
         }
         anchorpane.getChildren().add(tilepane2);
+        nodeClassStacks.push(tilepaneStyleClass);
         next.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {

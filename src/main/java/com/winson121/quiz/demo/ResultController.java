@@ -54,4 +54,26 @@ public class ResultController {
             throw new RuntimeException(e);
         }
     }
+
+    @FXML
+    protected void onReviewButtonClick(ActionEvent actionEvent) {
+        Stage stage = (Stage) ((Button)actionEvent.getSource()).getScene().getWindow();
+
+        // close the result stage
+        Stage thisStage = (Stage) ((Button)actionEvent.getSource()).getScene().getWindow();
+        thisStage.close();
+
+        // load the start stage
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("review.fxml"));
+        try {
+            Scene scene = new Scene(fxmlLoader.load());
+            stage = new Stage();
+            stage.setScene(scene);
+            stage.initStyle(StageStyle.TRANSPARENT);
+            scene.setFill(Color.TRANSPARENT);
+            stage.show();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }
