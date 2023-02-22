@@ -99,6 +99,7 @@ public class ReviewController {
                 } else if (answer.equals(s)) {
                     rad.setSelected(true);
                 }
+
             }
             tilepane2.getChildren().add(rad);
 
@@ -213,12 +214,12 @@ public class ReviewController {
             tf.getChildren().add(partQuestion);
             if (numBlanks > 0) {
                 List<Text> answerTexts = new ArrayList<>();
-                if (savedAnswerStrings.get(answerIndex).equals(correctAnswers.get(answerIndex))) {
+                if (savedAnswerStrings.get(answerIndex).strip().toLowerCase().equals(correctAnswers.get(answerIndex).strip().toLowerCase())) {
                     Text answerText = new Text(" ");
                     answerText.setText(savedAnswerStrings.get(answerIndex));
                     answerText.setFill(Color.GREEN);
                     answerTexts.add(answerText);
-                } else if (!savedAnswerStrings.get(answerIndex).equals(correctAnswers.get(answerIndex))) {
+                } else if (!savedAnswerStrings.get(answerIndex).strip().toLowerCase().equals(correctAnswers.get(answerIndex).strip().toLowerCase())) {
                     Text wrongAnswerText = new Text();
                     String answerString = savedAnswerStrings.get(answerIndex);
                     if (answerString.isEmpty()) {

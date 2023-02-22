@@ -26,6 +26,7 @@ public class HelloController {
     @FXML
     private Label welcomeText;
 
+    private static String lastVisitedDirectory = System.getProperty("user.home");
     static List<Question> questions = new ArrayList<>();
 
     private Desktop desktop = Desktop.getDesktop();
@@ -43,6 +44,14 @@ public class HelloController {
         configureFileChooser(fileChooser);
         fileChooser.setTitle("Open Resource File");
         File file = fileChooser.showOpenDialog(stage);
+
+        if (file != null) {
+            // pickUpPathField it's your TextField fx:id
+            lastVisitedDirectory =  file.getParent();
+
+        } else  {
+            lastVisitedDirectory = System.getProperty("user.home");
+        }
 
         ObjectMapper objectMapper = new ObjectMapper();
 
@@ -81,7 +90,7 @@ public class HelloController {
             final FileChooser fileChooser) {
         fileChooser.setTitle("View Questions");
         fileChooser.setInitialDirectory(
-                new File(System.getProperty("user.home"))
+                new File(lastVisitedDirectory)
         );
         fileChooser.getExtensionFilters().addAll(
                 new FileChooser.ExtensionFilter("JSON", "*.json"),
